@@ -1,0 +1,122 @@
+<head>
+		<style>
+			fieldset{
+				 background:lightyellow;
+				 border:10px solid yellow;
+				 margin-bottom:10px
+				 width:720px;
+			}
+			label{
+				width: 180px;
+				display:inline-block;
+				text-align:right;
+				text-align:top;
+			}
+			input[type="checkbox"],input[type="radio"]
+			{
+				width: auto;
+			}
+			textarea{
+				width: 360px;
+				height: 50px;
+			}
+			input[type="range"]
+			{
+				text-align: center;
+			}
+			.leftlabel, .rightlabel {
+    		width: 50px;
+    		padding: 3px;
+    		display: inline-block;
+    		text-align: center;
+			}
+
+			.leftlabel {
+	  		  background-color: red;
+    		color: white;
+			}
+			.rightlabel {
+   			 background-color: purple;
+    		color: white;
+			}
+			label:hover{
+				font-size: 40px
+				}
+			input:hover{
+				font-size: 40px
+			}
+		</style>
+	</head>
+	<body>
+		<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php ."
+		method="post" enctype="multipart/form-data">
+		<h1> Please Enter Your Details For Our Dating Website!</h1>
+			<fieldset>
+				<legend>Your Face</legend>
+				<label for="image">Your image:</label>
+				<input type="file" id="preview" name="preview" required> <br>
+				<label for="preview">Image preview:</label>
+				<img src="" id="preview" >
+
+			</fieldset>
+
+			<fieldset>
+				<legend>Your General Details </legend>
+				<label for="name">Name:</label>
+				<input type="text" name="name" placeholder="Your full name" required><br>
+
+				<label for="Gender">Gender:</label>
+				<input type="radio" name="Gender" value="male" required>Male
+				<input type="radio" name="Gender" value="female" required>Female<br>
+
+				<label for="age">Age:</label>
+				<input type="number" name="age" required><br>
+
+				<label for="date of birth">Date of birth:</label>
+				<input type="date" name="date of birth"> <br>
+
+				<label for="favorite color">Favorite color:</label>
+				<input type="color" name="favorite color"> <br>
+
+				<label for="country">Which country:</label>
+				<select>
+					<option value="">No selection</option>
+					<option value="IN">India</option>
+					<option value="US">USA</option>
+					<option value="AUS">Australia</option>
+					<option value="UK">United Kingdom</option>
+					<option value="KN">Kenya</option>
+				</select>
+			</fieldset>
+
+			<fieldset>
+				<legend>Your Indicators</legend>
+				<label for="height" class=margin>Height:</label>
+				<span class="leftlabel">Short</span><input type="range" min="0" max="100" name="Height"><span class="rightlabel">Tall</span><br>
+				<label for="salary" class="margin">Salary:</label>
+				<span class="leftlabel">Poor</span><input type="range" min="0" max="100" name="Salary"><span class="rightlabel">Rich</span><br>
+
+			</fieldset>
+
+			<fieldset>
+				<legend>Your Contact Information</legend>
+				<label for="email">Email:</label>
+				<input type="email" name="email" required><br>
+
+				<label for="mobile number">Mobile:</label>
+				<input type="tel" name="mobile number"><br>
+
+				<label for="address">Address:</label>
+				<textarea> </textarea><br>
+
+				<label for="method">Method to contact you:</label>
+				<input type="checkbox" name="method" value="Email">Email
+				<input type="checkbox" name="method" value="Whatsapp">Whatsapp 
+				<input type="checkbox" name="method" value="In-app chat">In-app chat
+			</fieldset>
+			<br>
+			<input type="submit" value="Submit">
+		</form>
+		<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+	</body>
+</html>
